@@ -1,14 +1,26 @@
 ---
-title: My remix blog
+title: Making a Remix blog from scratch
 date: 2022-05-28
 meta:
-    title: meta title
-    description: Making a blog in remix run in 50min from scratch!
+    title: Making a Remix blog from scratch
+    description: What joy to use bleeding edge things to make websites from scratch. How to make a blog with remix run, tailwind and vercel in a couple of hours.
+
 ---
+import { formatDate } from "~/utils";
 
 # {attributes.title}
-## {attributes.date.toUTCString()}
+### {formatDate(attributes.date)}
+
+What joy to use bleeding edge things to make websites from scratch. How to make a blog with remix run, tailwind and vercel in a couple of hours.
+
+To replicate watch this [awesome video](https://www.youtube.com/watch?v=5O6uhyaSvCM) and check out the linked below.
+
+Links:
+- [tailwind typography plugin](https://tailwindcss.com/docs/typography-plugin)
+- [source code](https://github.dev/duncanhunter/duncan-hunter-blog-remix)
+- [another awesome blog tutorial from remix](https://remix.run/docs/en/v1/tutorials/blog)
 
 ```ts
  const foo = 'foo';
 ```
+figure: Even with syntax highlighting :)
