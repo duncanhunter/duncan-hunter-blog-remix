@@ -6,7 +6,9 @@
     "build": "npm run build:css && remix build",
     "build:css": "tailwindcss -o ./app/tailwind.css",
     "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "dev:css": "tailwindcss -o ./app/tailwind.css --watch"
+    "dev:css": "tailwindcss -o ./app/tailwind.css --watch",
+    "lint": "eslint 'app/**' --no-eslintrc app/tailwind.css",
+    "lint:fix": "eslint --fix 'app/**' --no-eslintrc app/tailwind.css"
   },
   "dependencies": {
     "@remix-run/node": "^1.5.1",

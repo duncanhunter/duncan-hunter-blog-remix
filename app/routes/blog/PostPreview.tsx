@@ -2,13 +2,18 @@ import { Link } from "@remix-run/react";
 import { formatDate } from "~/utils";
 
 export default function PostPreview({ post }: any) {
+  const imageUrl =
+    process.env.NODE_ENV === "development"
+      ? `http://localhost:3000/${post.imagePath}`
+      : `http://duncanhunter.com.au/${post.imagePath}`;
+
   return (
-    <div className="flex flex-col rounded-lg shadow-lg overflow-hidd">
-      {post.image ? (
+    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden mb-10">
+      {post.imagePath ? (
         <div className="flex-shrink-0">
           <img
             className="h-48 w-full object-cover"
-            src={post.image}
+            src={imageUrl}
             alt="post.imageAlt"
           ></img>
         </div>
