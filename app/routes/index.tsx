@@ -57,7 +57,7 @@ export default function Index() {
             </p>
             <div className="mt-8 max-w-lg mx-auto">
               <Tags activeTagId={activeTagId} />
-              <div className="mt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+              <div className="mt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-1 lg:max-w-none">
                 <ul>
                   {posts.map((post: any) => (
                     <PostPreview key="post.slug" post={post} />
