@@ -1,8 +1,9 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { getNewMatchesForLinks } from "@remix-run/react/links";
 import * as firstPost from "./blog/first-post.mdx";
 import PostPreview from "./blog/PostPreview";
+import Tags, { Tag } from "./../components/Tags";
+import { useState } from "react";
 
 function postFromModule(mod: any) {
   return {
@@ -20,6 +21,7 @@ export const loader: LoaderFunction = () => {
 
 export default function Index() {
   const posts = useLoaderData();
+  const [activeTags, setActiveTags] = useState<Record<string, Tag>>({});
 
   return (
     <main>
@@ -44,6 +46,7 @@ export default function Index() {
             </p>
             <div>
               <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                <Tags activeTags={activeTags} setActiveTags={setActiveTags} />
                 <ul>
                   {posts.map((post: any) => (
                     <PostPreview key="post.slug" post={post} />

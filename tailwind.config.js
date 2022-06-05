@@ -35,7 +35,7 @@ module.exports = {
       },
       colors: {
         primary: colors.yellow,
-        gray: colors.gray,
+        gray: colors.zinc,
       },
     },
   },
