@@ -25,9 +25,9 @@ export default function Tags({
   ];
 
   return (
-    <div className="flex space-x-4 flex-wrap">
+    <div className="flex space-x-2 flex-wrap">
       {tags.map((tag) => (
-        <Link to={`?tag=${tag.id}`} key={tag.id} className="p-2">
+        <Link to={`?tag=${tag.id}`} key={tag.id} className="pt-2">
           <button
             type="button"
             className={`whitespace-nowrap inline-flex items-center px-2.5 py-1.5 border border-gray-700 shadow-sm text-xs font-medium rounded text-gray-100 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 ${
