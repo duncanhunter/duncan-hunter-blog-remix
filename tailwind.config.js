@@ -21,11 +21,17 @@ module.exports = {
             h3: {
               color: theme("colors.gray.300"),
             },
+            h4: {
+              color: theme("colors.gray.300"),
+            },
             a: {
               color: theme("colors.blue.500"),
               "&:hover": {
                 color: theme("colors.blue.400"),
               },
+            },
+            p: {
+              color: theme("colors.gray.300"),
             },
           },
         },
