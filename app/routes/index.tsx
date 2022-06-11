@@ -48,7 +48,7 @@ export default function Index() {
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-300 sm:mt-4">
               Hi, I'm Duncan Hunter, I write this blog, work for{" "}
               <a
-                className="text-blue-600 hover:text-blue-400"
+                className="underline underline-offset-1 hover:text-blue-400"
                 href="https://zware.com.au"
               >
                 zware.com.au
@@ -60,7 +60,7 @@ export default function Index() {
               <div className="mt-8 max-w-lg mx-auto grid gap-5 lg:grid-cols-1 lg:max-w-none">
                 <ul>
                   {posts.map((post: any) => (
-                    <PostPreview key="post.slug" post={post} />
+                    <PostPreview key={post.slug} post={post} />
                   ))}
                 </ul>
               </div>
